@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MPI IPAS Kelas V — Ayo Berkenalan dengan Bumi Kita</title>
+<style>
+:root{--navy:#123b5d;--blue:#1677b8;--sky:#e8f7ff;--teal:#0f9b8e;--yellow:#ffd166;--ink:#183247;--white:#fff;--muted:#5a7080}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#dff5ff,#f8fcff 48%,#e9f8f2);line-height:1.55}
+header{background:linear-gradient(125deg,#0d3154,#1478ad);color:white;padding:28px 18px 34px;text-align:center;position:relative;overflow:hidden}
+header:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:#ffffff12;right:-60px;top:-120px}
+header:after{content:"";position:absolute;width:170px;height:170px;border-radius:50%;background:#ffffff10;left:-45px;bottom:-100px}
+.school{font-size:.92rem;letter-spacing:.08em;text-transform:uppercase;opacity:.9}.hero{display:flex;gap:20px;align-items:center;justify-content:center;max-width:950px;margin:14px auto 0;position:relative;z-index:1}.hero h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;margin:0 0 12px}.hero p{margin:0 auto;max-width:600px}.earth{font-size:clamp(5rem,14vw,9rem);filter:drop-shadow(0 8px 12px #001a3c55);animation:float 4s ease-in-out infinite}@keyframes float{50%{transform:translateY(-8px)}}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:14px;background:#fff;box-shadow:0 3px 14px #143d5610;position:sticky;top:0;z-index:5}nav button,.btn{border:0;border-radius:999px;padding:10px 16px;background:#e7f4fb;color:var(--navy);font-weight:700;cursor:pointer;transition:.2s}nav button:hover,nav button.active{background:var(--blue);color:white;transform:translateY(-1px)}
+main{max-width:1050px;margin:24px auto;padding:0 16px 50px}.panel{display:none;animation:appear .25s ease}.panel.active{display:block}@keyframes appear{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.card{background:#fff;border:1px solid #d9edf7;border-radius:20px;padding:clamp(18px,3vw,28px);margin:16px 0;box-shadow:0 8px 24px #16415c0b}.card h2{color:var(--navy);margin-top:0}.lead{font-size:1.08rem;color:#35566c}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:14px}.mini{background:#f1faff;border-radius:16px;padding:17px;border:1px solid #d7edf7}.mini .emoji{font-size:2.3rem}.mini h3{margin:8px 0 4px;color:#135b88}.pill{display:inline-block;background:#fff3c8;color:#765400;padding:4px 10px;border-radius:999px;font-weight:700;font-size:.82rem}.visual{font-size:clamp(3rem,8vw,5rem);text-align:center;background:linear-gradient(135deg,#e8f8ff,#d8f5ee);border-radius:18px;padding:15px;margin:12px 0}.layerlist{display:grid;grid-template-columns:1fr;gap:8px;max-width:680px;margin:16px auto}.layer{padding:13px;border-radius:12px;color:#102e43;font-weight:700;text-align:center;border:2px solid #ffffff;cursor:pointer}.layer:hover{filter:brightness(.97);transform:scale(1.01)}.crust{background:#8dd7a9}.mantle{background:#ffc66d}.outer{background:#ff926e}.inner{background:#f05b66;color:white}.feedback{min-height:28px;font-weight:700;margin-top:12px}.question{padding:16px;border:1px solid #dcecf4;border-radius:15px;margin:14px 0;background:#fbfeff}.question p{font-weight:700;margin-top:0}.question label{display:block;padding:7px 10px;border-radius:9px;cursor:pointer}.question label:hover{background:#edf8fd}input[type=radio]{margin-right:8px;accent-color:#1677b8}.btn{background:var(--blue);color:white;margin:5px 5px 5px 0}.btn.secondary{background:#e8f4fa;color:#154d70}.btn:focus,button:focus{outline:3px solid #ffd166;outline-offset:2px}.progress{height:12px;background:#e1edf3;border-radius:99px;overflow:hidden}.progress div{height:100%;width:0;background:linear-gradient(90deg,#0f9b8e,#45c4a8);transition:width .3s}.result{font-size:1.15rem;font-weight:800;color:var(--navy)}footer{text-align:center;padding:25px;background:#0d3154;color:#eaf8ff}.small{font-size:.9rem;color:var(--muted)}.note{border-left:5px solid var(--teal);background:#effbf8;padding:14px 16px;border-radius:0 12px 12px 0}.compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.compare>div{padding:18px;border-radius:16px;background:#f5fbff;border:1px solid #d7eaf5}@media(max-width:650px){.hero{flex-direction:column-reverse;gap:4px}.earth{font-size:5.2rem}nav{position:static}nav button{padding:9px 12px;font-size:.9rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="school">SD Negeri 5 Pakue Utara • IPAS Kelas V • Fase C</div>
+  <div class="hero"><div><h1>Ayo Berkenalan dengan Bumi Kita!</h1><p>Jelajahi planet tempat kita tinggal melalui materi, aktivitas, dan kuis interaktif.</p><p style="margin-top:15px"><span class="pill">Belajar • Jelajah • Berlatih</span></p></div><div class="earth" aria-label="Ilustrasi planet Bumi">🌎</div></div>
+</header>
+<nav aria-label="Menu pembelajaran">
+  <button class="active" data-target="beranda">Beranda</button>
+  <button data-target="bumi">Mengenal Bumi</button>
+  <button data-target="lapisan">Lapisan Bumi</button>
+  <button data-target="permukaan">Permukaan Bumi</button>
+  <button data-target="gerak">Gerakan Bumi</button>
+  <button data-target="kuis">Kuis</button>
+</nav>
+<main>
+<section id="beranda" class="panel active">
+ <div class="card">
+  <h2>Selamat datang, Penjelajah Bumi! 👋</h2>
+  <p class="lead">Pernahkah kamu bertanya, mengapa kita bisa hidup di Bumi? Mengapa ada siang dan malam? Mari kita cari tahu bersama!</p>
+  <div class="grid">
+   <div class="mini"><div class="emoji">🌍</div><h3>Tujuan 1</h3><p>Mengenali Bumi sebagai planet tempat tinggal kita.</p></div>
+   <div class="mini"><div class="emoji">🧅</div><h3>Tujuan 2</h3><p>Menyebutkan lapisan utama penyusun Bumi.</p></div>
+   <div class="mini"><div class="emoji">🏞️</div><h3>Tujuan 3</h3><p>Mengidentifikasi kenampakan permukaan Bumi.</p></div>
+   <div class="mini"><div class="emoji">☀️</div><h3>Tujuan 4</h3><p>Menjelaskan rotasi dan revolusi Bumi secara sederhana.</p></div>
+  </div>
+ </div>
+ <div class="card"><h2>Petunjuk penggunaan</h2><ol><li>Pilih menu materi di bagian atas.</li><li>Baca penjelasan dan tekan tombol aktivitas.</li><li>Kerjakan kuis secara mandiri.</li><li>Periksa nilai dan baca kembali materi jika perlu.</li></ol><div class="note"><b>Ingat!</b> Bumi adalah rumah kita bersama. Kita perlu menjaga air, udara, tanah, dan semua makhluk hidup.</div></div>
+ <div class="card"><h2>Pemantik: Apa yang kamu ketahui?</h2><p>Menurutmu, bagian Bumi manakah yang paling banyak terlihat berwarna biru pada gambar globe?</p><button class="btn secondary" onclick="showAnswer('pemantik','Biru biasanya menunjukkan wilayah perairan seperti samudra dan laut. Sebagian besar permukaan Bumi tertutup air.')">Lihat petunjuk</button><p id="pemantik" class="feedback" aria-live="polite"></p></div>
+</section>
+<section id="bumi" class="panel">
+ <div class="card"><h2>1. Bumi, rumah kita 🌎</h2><div class="visual">🌎 ☁️ ☀️</div>
+ <p>Bumi adalah salah satu planet di Tata Surya. Bumi mengelilingi Matahari dan memiliki kondisi yang mendukung kehidupan, seperti air cair, udara, serta suhu yang sesuai di banyak wilayah.</p>
+ <div class="grid"><div class="mini"><div class="emoji">💧</div><h3>Air</h3><p>Air dibutuhkan manusia, hewan, dan tumbuhan.</p></div><div class="mini"><div class="emoji">🌬️</div><h3>Atmosfer</h3><p>Lapisan gas yang menyelimuti Bumi dan membantu mendukung kehidupan.</p></div><div class="mini"><div class="emoji">🌱</div><h3>Kehidupan</h3><p>Berbagai makhluk hidup tinggal di darat, air, dan udara.</p></div></div>
+ <div class="note"><b>Fakta menarik:</b> Jika dilihat dari luar angkasa, Bumi tampak kebiruan karena sebagian besar permukaannya tertutup air.</div>
+ </div>
+ <div class="card"><h2>Aktivitas cepat</h2><p>Manakah yang termasuk kebutuhan penting bagi kehidupan di Bumi?</p><div id="need-options"><button class="btn secondary" onclick="checkNeed(false)">Air bersih dan udara</button><button class="btn secondary" onclick="checkNeed(true)">Hanya mainan</button><button class="btn secondary" onclick="checkNeed(false)">Air, udara, dan lingkungan yang sesuai</button></div><p id="need-feedback" class="feedback" aria-live="polite"></p></div>
+</section>
+<section id="lapisan" class="panel">
+ <div class="card"><h2>2. Mengenal lapisan Bumi 🧅</h2><p>Bumi tersusun atas beberapa lapisan. Kita dapat mempelajarinya melalui model penampang, seperti melihat bagian dalam buah yang dibelah.</p>
+ <div class="visual">🌍</div>
+ <p><b>Tekan nama lapisan</b> untuk membaca penjelasannya.</p>
+ <div class="layerlist">
+  <button class="layer crust" onclick="layerInfo('Kerak Bumi','Lapisan paling luar dan relatif tipis. Di sinilah kita tinggal; kerak mencakup daratan dan dasar samudra.')">1. Kerak Bumi</button>
+  <button class="layer mantle" onclick="layerInfo('Mantel','Lapisan sangat tebal di bawah kerak. Batuan di dalamnya sangat panas dan dapat bergerak sangat lambat.')">2. Mantel</button>
+  <button class="layer outer" onclick="layerInfo('Inti luar','Bagian inti yang tersusun terutama dari logam cair, terutama besi dan nikel.')">3. Inti luar</button>
+  <button class="layer inner" onclick="layerInfo('Inti dalam','Bagian paling dalam Bumi. Sangat panas, tetapi tetap padat karena tekanan yang sangat besar.')">4. Inti dalam</button>
+ </div>
+ <div class="mini" aria-live="polite"><h3 id="layer-title">Pilih salah satu lapisan</h3><p id="layer-text">Penjelasan lapisan akan muncul di sini.</p></div>
+ </div>
+ <div class="card"><h2>Cek pemahaman</h2><p>Lapisan tempat manusia tinggal adalah …</p><button class="btn secondary" onclick="layerQuiz(false)">Mantel</button><button class="btn secondary" onclick="layerQuiz(true)">Kerak Bumi</button><button class="btn secondary" onclick="layerQuiz(false)">Inti dalam</button><p id="layer-feedback" class="feedback" aria-live="polite"></p></div>
+</section>
+<section id="permukaan" class="panel">
+ <div class="card"><h2>3. Permukaan Bumi 🏞️</h2><p>Permukaan Bumi memiliki berbagai bentuk. Ada wilayah daratan dan perairan, masing-masing dengan ciri yang beragam.</p>
+ <div class="grid">
+  <div class="mini"><div class="emoji">⛰️</div><h3>Gunung</h3><p>Bagian daratan yang menjulang tinggi dibanding daerah sekitarnya.</p></div>
+  <div class="mini"><div class="emoji">🌾</div><h3>Dataran</h3><p>Wilayah daratan yang relatif datar atau landai.</p></div>
+  <div class="mini"><div class="emoji">🏞️</div><h3>Sungai</h3><p>Aliran air yang mengalir dari tempat lebih tinggi menuju tempat lebih rendah.</p></div>
+  <div class="mini"><div class="emoji">🌊</div><h3>Laut dan samudra</h3><p>Wilayah perairan asin yang luas.</p></div>
+ </div>
+ <div class="compare"><div><h3>Daratan</h3><p>Contoh: gunung, bukit, lembah, dataran tinggi, dan dataran rendah.</p></div><div><h3>Perairan</h3><p>Contoh: sungai, danau, laut, dan samudra.</p></div></div>
+ </div>
+ <div class="card"><h2>Amati lingkunganmu</h2><p>Sebutkan satu kenampakan alam yang kamu lihat di sekitar rumah atau sekolah. Apakah termasuk daratan atau perairan?</p><textarea id="observasi" rows="3" style="width:100%;border:1px solid #b9d9e8;border-radius:12px;padding:12px;font:inherit" placeholder="Tuliskan jawabanmu di sini..."></textarea><button class="btn" onclick="saveObservation()">Periksa jawaban</button><p id="observasi-feedback" class="feedback" aria-live="polite"></p></div>
+</section>
+<section id="gerak" class="panel">
+ <div class="card"><h2>4. Gerakan Bumi 🌞</h2><p>Bumi melakukan dua gerakan penting, yaitu berputar pada porosnya dan mengelilingi Matahari.</p>
+ <div class="grid">
+  <div class="mini"><div class="emoji">🔄</div><h3>Rotasi</h3><p>Perputaran Bumi pada porosnya. Satu kali rotasi berlangsung sekitar 24 jam dan menyebabkan pergantian siang dan malam.</p><button class="btn" onclick="animateEarth('rotasi')">Lihat simulasi sederhana</button></div>
+  <div class="mini"><div class="emoji">☀️🌍</div><h3>Revolusi</h3><p>Peredaran Bumi mengelilingi Matahari. Satu kali revolusi berlangsung sekitar 365¼ hari atau satu tahun.</p><button class="btn" onclick="animateEarth('revolusi')">Lihat simulasi sederhana</button></div>
+ </div>
+ <div id="motion-box" class="visual" aria-live="polite">🌞 &nbsp;&nbsp; 🌍<p style="font-size:1rem;margin:0">Pilih simulasi di atas.</p></div>
+ <div class="note"><b>Catatan:</b> Musim di berbagai wilayah dipengaruhi oleh kemiringan sumbu Bumi saat Bumi berevolusi mengelilingi Matahari. Tidak semua tempat mengalami empat musim.</div>
+ </div>
+ <div class="card"><h2>Rotasi atau revolusi?</h2><p>Gerakan Bumi yang menyebabkan pergantian siang dan malam adalah …</p><button class="btn secondary" onclick="motionQuiz(true)">Rotasi</button><button class="btn secondary" onclick="motionQuiz(false)">Revolusi</button><p id="motion-feedback" class="feedback" aria-live="polite"></p></div>
+</section>
+<section id="kuis" class="panel">
+ <div class="card"><h2>🎯 Kuis Penjelajah Bumi</h2><p>Jawab 8 soal berikut. Pilih satu jawaban terbaik untuk setiap soal, lalu tekan <b>Periksa Nilai</b>.</p><div class="progress"><div id="progress-bar"></div></div><p class="small" id="progress-label">0 dari 8 soal dijawab</p>
+ <form id="quiz-form">
+ <div class="question"><p>1. Planet tempat kita tinggal adalah …</p><label><input type="radio" name="q1" value="a">Mars</label><label><input type="radio" name="q1" value="b">Bumi</label><label><input type="radio" name="q1" value="c">Jupiter</label></div>
+ <div class="question"><p>2. Warna biru pada globe umumnya menunjukkan …</p><label><input type="radio" name="q2" value="a">Perairan</label><label><input type="radio" name="q2" value="b">Gunung</label><label><input type="radio" name="q2" value="c">Awan</label></div>
+ <div class="question"><p>3. Lapisan paling luar Bumi disebut …</p><label><input type="radio" name="q3" value="a">Inti dalam</label><label><input type="radio" name="q3" value="b">Mantel</label><label><input type="radio" name="q3" value="c">Kerak Bumi</label></div>
+ <div class="question"><p>4. Lapisan di bawah kerak Bumi adalah …</p><label><input type="radio" name="q4" value="a">Atmosfer</label><label><input type="radio" name="q4" value="b">Mantel</label><label><input type="radio" name="q4" value="c">Samudra</label></div>
+ <div class="question"><p>5. Contoh kenampakan perairan adalah …</p><label><input type="radio" name="q5" value="a">Bukit</label><label><input type="radio" name="q5" value="b">Dataran tinggi</label><label><input type="radio" name="q5" value="c">Sungai</label></div>
+ <div class="question"><p>6. Rotasi Bumi berlangsung sekitar …</p><label><input type="radio" name="q6" value="a">24 jam</label><label><input type="radio" name="q6" value="b">7 hari</label><label><input type="radio" name="q6" value="c">365 hari</label></div>
+ <div class="question"><p>7. Pergantian siang dan malam terjadi karena …</p><label><input type="radio" name="q7" value="a">Awan bergerak</label><label><input type="radio" name="q7" value="b">Rotasi Bumi</label><label><input type="radio" name="q7" value="c">Bulan mengelilingi Bumi</label></div>
+ <div class="question"><p>8. Satu kali revolusi Bumi berlangsung sekitar …</p><label><input type="radio" name="q8" value="a">24 jam</label><label><input type="radio" name="q8" value="b">30 hari</label><label><input type="radio" name="q8" value="c">365¼ hari</label></div>
+ <button class="btn" type="button" onclick="gradeQuiz()">Periksa Nilai</button><button class="btn secondary" type="button" onclick="resetQuiz()">Ulangi Kuis</button>
+ </form>
+ <div id="quiz-result" class="card" style="display:none" aria-live="polite"><div class="result" id="score-text"></div><p id="score-message"></p><div id="answer-review"></div></div>
+ </div>
+</section>
+</main>
+<footer><b>Media Pembelajaran Interaktif IPAS • Kelas V</b><br>SD Negeri 5 Pakue Utara • Fase C<br><span class="small" style="color:#c5e6f5">Belajar mengenal Bumi, menjaga Bumi bersama.</span></footer>
+<script>
+const navButtons=document.querySelectorAll('nav button');
+navButtons.forEach(btn=>btn.addEventListener('click',()=>{navButtons.forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.getElementById(btn.dataset.target).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}));
+function showAnswer(id,text){document.getElementById(id).textContent=text}
+function checkNeed(wrong){const el=document.getElementById('need-feedback');el.textContent=wrong?'Belum tepat. Mainan bukan kebutuhan dasar kehidupan. Coba pilih lagi.':'Benar! Air, udara, dan lingkungan yang sesuai sangat penting bagi kehidupan.';el.style.color=wrong?'#b45309':'#087f5b'}
+function layerInfo(title,text){document.getElementById('layer-title').textContent=title;document.getElementById('layer-text').textContent=text}
+function layerQuiz(correct){const el=document.getElementById('layer-feedback');el.textContent=correct?'Tepat! Kita tinggal di permukaan kerak Bumi.':'Belum tepat. Ingat, manusia hidup di bagian paling luar Bumi.';el.style.color=correct?'#087f5b':'#b45309'}
+function saveObservation(){const val=document.getElementById('observasi').value.trim();const el=document.getElementById('observasi-feedback');if(!val){el.textContent='Tuliskan jawabanmu terlebih dahulu.';el.style.color='#b45309'}else{el.textContent='Bagus! Diskusikan jawabanmu dengan guru atau teman. Pastikan kamu menyebutkan nama kenampakan dan kategorinya.';el.style.color='#087f5b'}}
+function animateEarth(type){const box=document.getElementById('motion-box');if(type==='rotasi'){box.innerHTML='🌞 &nbsp; <span style="display:inline-block;animation:spin 2s linear infinite">🌍</span><p style="font-size:1rem;margin:0">Rotasi: Bumi berputar pada porosnya.</p>'}else{box.innerHTML='<span style="display:inline-block">☀️</span> &nbsp; <span style="display:inline-block;animation:orbit 3s ease-in-out infinite alternate">🌍</span><p style="font-size:1rem;margin:0">Revolusi: Bumi mengelilingi Matahari.</p>'}}
+const style=document.createElement('style');style.textContent='@keyframes spin{to{transform:rotate(360deg)}}@keyframes orbit{from{transform:translateX(-12px) rotate(-10deg)}to{transform:translateX(12px) rotate(10deg)}}';document.head.appendChild(style);
+function motionQuiz(correct){const el=document.getElementById('motion-feedback');el.textContent=correct?'Benar! Rotasi Bumi menyebabkan pergantian siang dan malam.':'Belum tepat. Revolusi adalah gerakan Bumi mengelilingi Matahari.';el.style.color=correct?'#087f5b':'#b45309'}
+const answers={q1:'b',q2:'a',q3:'c',q4:'b',q5:'c',q6:'a',q7:'b',q8:'c'};
+const explanations=['Bumi adalah planet tempat tinggal kita.','Warna biru pada globe umumnya menunjukkan perairan.','Kerak Bumi merupakan lapisan paling luar.','Mantel terletak di bawah kerak Bumi.','Sungai merupakan kenampakan perairan.','Rotasi Bumi berlangsung sekitar 24 jam.','Rotasi Bumi menyebabkan pergantian siang dan malam.','Revolusi Bumi berlangsung sekitar 365¼ hari.'];
+function updateProgress(){let count=0;Object.keys(answers).forEach(q=>{if(document.querySelector('input[name="'+q+'"]:checked'))count++});document.getElementById('progress-bar').style.width=(count/8*100)+'%';document.getElementById('progress-label').textContent=count+' dari 8 soal dijawab'}
+document.querySelectorAll('#quiz-form input').forEach(i=>i.addEventListener('change',updateProgress));
+function gradeQuiz(){let score=0,review='';for(let i=1;i<=8;i++){const q='q'+i;const selected=document.querySelector('input[name="'+q+'"]:checked');const ok=selected&&selected.value===answers[q];if(ok)score++;review+='<p><b>Soal '+i+': '+(ok?'Benar':'Perlu dipelajari lagi')+'</b> — '+explanations[i-1]+'</p>'}const result=document.getElementById('quiz-result');result.style.display='block';document.getElementById('score-text').textContent='Nilai kamu: '+(score*12.5).toLocaleString('id-ID')+' / 100 ('+score+' dari 8 benar)';document.getElementById('score-message').textContent=score>=7?'Hebat! Kamu sudah menjadi Penjelajah Bumi yang andal.':score>=5?'Bagus! Baca kembali materi yang belum kamu kuasai, lalu coba lagi.':'Tetap semangat! Pelajari kembali materi dan ulangi kuis.';document.getElementById('answer-review').innerHTML=review;result.scrollIntoView({behavior:'smooth',block:'start'})}
+function resetQuiz(){document.getElementById('quiz-form').reset();document.getElementById('quiz-result').style.display='none';updateProgress()}
+</script>
+</body>
+</html>
